@@ -1,2 +1,2 @@
 # tcptty
-A framework for transmiting data between tcp and uart
+A framework for transmitting data between tcp and uart
