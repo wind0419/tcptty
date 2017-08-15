@@ -7,35 +7,20 @@
 #define DEV_NAME_LEN		(32)
 #define DEV_DATA_MAX_LEN	(1024)
 
-enum _e_cmd_type {
-	E_INVALID = -1,
-	E_RESERVED = 0,
-	E_LOGIN,
-	E_START,
-	E_STOP,
+enum _tty_list {
+	T_CMD_INIT = 0,
+	T_CMD1,
+	T_CMD2,
 	
-	E_MAX
+	T_CMD_MAX,
 };
 
 enum _svr_cmd_list {
-	RESV = 0,
-	IDM_RESET,
-	IDM_GETDEV,
-	IDM_TAKEUPDEV,
-	IDM_RELEASEDEV,
-	IDM_DOSTART,
-	IDM_DOSTOP,
-	IDM_SETPARS,
-	IDM_DELPARS,
+	S_CMD_INIT = 0,
+	S_CMD1,
+	S_CMD2,
 	
-	IDM_DEV_HEART = 0x0100,
-	IDM_DEV_LOGIN,
-	IDM_DEV_STATUS,
-	IDM_DEV_ERROR,
-	IDM_DEV_TASKRET,
-	IDM_DEV_TASKPRO,
-	
-	IDM_CMD_END = 0xF000
+	S_CMD_MAX,
 };
 
 #define PACK(n) __attribute__((aligned(n),packed))
